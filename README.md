@@ -39,12 +39,16 @@ Have log of all transaction in job!
 - ESX
 
 # ToDo
-- add os.time text to reboot log.
-- add log on admin and modo command.
 - Move text from esx ressource to locales in esx_joblogs
 - add event and code need in esx_ambulancejob github
+- add event and code need in esx_billing github
+- add event and code need in esx_lscustom github
+- add event and code need in esx_mecanojob github
+- add event and code need in esx_policejob github
 - add event and code need in esx_vehicleshop github
 - add event and code need in esx_taxijob github
+- add log on admin and modo command.
+- add event and code need in es_admin2 github
 
 # Create By
 - Alex Garcio(https://github.com/RedAlex)
