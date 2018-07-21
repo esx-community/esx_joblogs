@@ -47,11 +47,20 @@ end
 
 
 RegisterServerEvent('esx_joblogs:AddInLog')
+AddEventHandler('esx_joblogs:AddInLog', function(job, locale, sourcename, targetname)
   local _job = job
-  local _message = message
-  SaveInLog(_job, _message)
+  local _locale = locale
+  local _sourcename = sourcename
+  local _targetname = targetname
+  local message = "["..os.date("%c").."] '".. _U(_locale, sourcename, _targetname)
   SaveInLog(_job, message)
 end)
 
 
 loadLogs()
+SaveInLog("ambulance", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("concess", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("mecano", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("police", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("sheriff", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("taxi", "["..os.date("%c").."] '".. _U("reboot", _source, _target))

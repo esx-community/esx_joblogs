@@ -1,5 +1,6 @@
 Locales['en'] = {
   -- Server
+  ['reboot'] = ' Server Open',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
