@@ -1,6 +1,6 @@
-Locales['fr'] = {
+Locales['en'] = {
   -- Server
-  ['reboot'] = 'Serveur Ouvert.',
+  ['reboot'] = 'Server Open',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
@@ -22,14 +22,14 @@ Locales['fr'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_policejob
-  ['add_weapon'] = '%s a rajouté un arme dans l\'armurerie du commissariat.',
-  ['get_search'] = '%s a fouillé %s',
-  ['temp'] = 'temp',
-  -- esx_taxijob
+  ['get_search'] = '%s search on %s',
   ['temp'] = 'temp',
   ['temp'] = 'temp',
+  -- esx_taxijob 
   ['temp'] = 'temp',
-  -- esx_vehicleshop
+  ['temp'] = 'temp',
+  ['temp'] = 'temp',
+  -- esx_vehicleshop 
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   ['temp'] = 'temp',

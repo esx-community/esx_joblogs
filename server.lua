@@ -14,11 +14,11 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 function loadLogs()
   LogAmbulance = LoadResourceFile("esx_joblogs", "Logs/ambulance.log") or ""
-  LogConcess   = LoadResourceFile("esx_joblogs", "Logs/concess.log") or ""
-  LogMecano    = LoadResourceFile("esx_joblogs", "Logs/mecano.log") or ""
-  LogPolice    = LoadResourceFile("esx_joblogs", "Logs/police.log") or ""
-  LogSheriff   = LoadResourceFile("esx_joblogs", "Logs/sheriff.log") or ""
-  LogTaxi      = LoadResourceFile("esx_joblogs", "Logs/taxi.log") or ""
+  LogConcess   = LoadResourceFile("esx_joblogs", "Logs/concess.log")   or ""
+  LogMecano    = LoadResourceFile("esx_joblogs", "Logs/mecano.log")    or ""
+  LogPolice    = LoadResourceFile("esx_joblogs", "Logs/police.log")    or ""
+  LogSheriff   = LoadResourceFile("esx_joblogs", "Logs/sheriff.log")   or ""
+  LogTaxi      = LoadResourceFile("esx_joblogs", "Logs/taxi.log")      or ""
 end
 
 function SaveInLog(job, message)
@@ -47,20 +47,20 @@ end
 
 
 RegisterServerEvent('esx_joblogs:AddInLog')
-AddEventHandler('esx_joblogs:AddInLog', function(job, locale, sourcename, targetname)
-  local _job = job
-  local _locale = locale
+AddEventHandler('esx_joblogs:AddInLog', function(job, localetxt, sourcename, targetname)
+  local _job        = job
+  local _localetxt  = localetxt
   local _sourcename = sourcename
   local _targetname = targetname
-  local message = "["..os.date("%c").."] '".. _U(_locale, sourcename, _targetname)
+  local message     = "["..os.date("%c").."] ' ".. _U(_localetxt, _sourcename, _targetname)
   SaveInLog(_job, message)
 end)
 
 
 loadLogs()
-SaveInLog("ambulance", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
-SaveInLog("concess", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
-SaveInLog("mecano", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
-SaveInLog("police", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
-SaveInLog("sheriff", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
-SaveInLog("taxi", "["..os.date("%c").."] '".. _U("reboot", _source, _target))
+SaveInLog("ambulance", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("concess", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("mecano", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("police", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("sheriff", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("taxi", "["..os.date("%c").."] ' ".. _U("reboot"))
