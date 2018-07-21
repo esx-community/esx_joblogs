@@ -47,17 +47,11 @@ end
 
 
 RegisterServerEvent('esx_joblogs:AddInLog')
-AddEventHandler('esx_joblogs:AddInLog', function(job, message)
   local _job = job
   local _message = message
   SaveInLog(_job, _message)
+  SaveInLog(_job, message)
 end)
 
 
 loadLogs()
-SaveInLog("ambulance", "Reboot")
-SaveInLog("concess", "Reboot")
-SaveInLog("mecano", "Reboot")
-SaveInLog("police", "Reboot")
-SaveInLog("sheriff", "Reboot")
-SaveInLog("taxi", "Reboot")
