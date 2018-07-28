@@ -6,18 +6,22 @@ Have log of all transaction in job!
 1. Clone the project and add it to your resorces directory
 2. Add the project to your `server.cfg`
 3. Go to compatible ressource and turn Config.EnableJobLogs to true
+4. Add esx_joblogs events in job or use compatible version of job.
+* esx_policejob with esx_joblogs in https://github.com/RedAlex/esx_policejob
 
 # Features
 - log reboot of your server.
 
-# Ready but not compatible at this time.
-- esx_policejob "Ready but not add in the github"
-  - Log bill send and pay (When compatible with esx_billing)
+- esx_policejob
+  - Log bill send 
+  - Log pay bill (When compatible with esx_billing)
   - Log card inspection
   - Log get search on a body
   - Log Take or add weapon in stock
   - Log Take of add item in stock
 
+
+# Ready but not compatible at this time.
 - esx_ambulancejob "Ready but not add in the github"
   - Log bill send and pay (When compatible with esx_billing)
   - Log Revive
@@ -44,7 +48,6 @@ Have log of all transaction in job!
 - add event and code need in esx_billing github
 - add event and code need in esx_lscustom github
 - add event and code need in esx_mecanojob github
-- add event and code need in esx_policejob github
 - add event and code need in esx_vehicleshop github
 - add event and code need in esx_taxijob github
 - add log on admin and modo command.
