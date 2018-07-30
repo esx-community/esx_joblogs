@@ -6,11 +6,11 @@ Locales['fr'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_ambulancejob
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['revive'] = '%s a réanimé %s',
+  ['heal'] = '%s a soigné %s',
+  ['getitem'] = '%s a pris des %s dans la pharmacie de l\'hôpital.',
   -- esx_billing
-  ['temp'] = 'temp',
+  ['sendBill'] = '%s a donné une amande a %s pour "%s"(%s)',
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_lscustom
@@ -29,7 +29,6 @@ Locales['fr'] = {
   ['getSharedInventory'] = '%s a retiré x%s %s du coffre dans le commissariat.',
   ['putStockItems'] = '%s a déposé x%s %s du coffre dans le commissariat.',
   ['removeArmoryWeapon'] = '%s à pris un arme dans l\'armurerie du commissariat.',
-  ['sendBill'] = '%s a donné une amande a %s pour "%s"(%s)',
   -- esx_taxijob
   ['temp'] = 'temp',
   ['temp'] = 'temp',
