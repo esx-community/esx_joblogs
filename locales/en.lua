@@ -1,6 +1,7 @@
 Locales['en'] = {
-  -- Server
+  -- Global
   ['reboot'] = 'Server Open',
+  ['sendBill'] = '%s has given a fine to %s for "%s"(%s)',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
@@ -10,7 +11,7 @@ Locales['en'] = {
   ['heal'] = '%s treated %s',
   ['getitem'] = '%s took some %s in the pharmacy of the hospital.',
   -- esx_billing
-  ['sendBill'] = '%s has given a fine to %s for "%s"(%s)',
+  ['temp'] = 'temp',
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_lscustom
@@ -34,9 +35,8 @@ Locales['en'] = {
   ['putStockItems'] = '%s has deposited x%s %s from the safe in the police station.',
   ['removeArmoryWeapon'] = '%s took a weapon in the police station\'s armory.',
   -- esx_taxijob 
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['getSharedInventoryTaxi'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
+  ['putStockItemsTaxi'] = '%s a déposé x%s %s du coffre Taxi.',
   -- esx_vehicleshop 
   ['temp'] = 'temp',
   ['temp'] = 'temp',
