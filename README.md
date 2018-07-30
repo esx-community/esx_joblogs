@@ -10,19 +10,20 @@ Have log of all transaction in job!
 * esx_policejob    with esx_joblogs in https://github.com/RedAlex/esx_policejob
 * esx_ambulancejob with esx_joblogs in https://github.com/RedAlex/esx_ambulancejob
 * esx_mecanojob    with esx_joblogs in https://github.com/RedAlex/esx_mecanojob
+* esx_taxijob      with esx_joblogs in https://github.com/RedAlex/esx_taxijob
 
 # Features
 - log reboot of your server.
 
 - esx_policejob
   - Log bill send 
-  - Log pay bill (When compatible with esx_billing)
   - Log card inspection
   - Log get search on a body
   - Log Take or add weapon in stock
   - Log Take of add item in stock
 
 - esx_ambulancejob
+  - Log bill send 
   - Log Take item in pharmacy
   - Log Revive
   - Log Heal
@@ -36,6 +37,10 @@ Have log of all transaction in job!
   - Log delete vehicle
   - Log tow vehicle
 
+- esx_taxijob
+  - Log bill send 
+  - Log Take of add item in stock
+  
 # Ready but not compatible at this time. 
 - lscustom
 
@@ -44,10 +49,11 @@ Have log of all transaction in job!
   - Log car buy
   - Log car sold to a player
   - Log car sold to a society (In test)
+
+- esx_billing
+  - Log pay bill
   
-- esx_taxijob "Ready but not add in the github"
-  - Log bill send and pay (When compatible with esx_billing)
-  
+ 
 # Requirements
 - ESX
 
