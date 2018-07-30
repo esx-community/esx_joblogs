@@ -18,9 +18,13 @@ Locales['en'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_mecanojob
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['getSharedInventorymecano'] = '%s removed x%s %s from Benny\'s safe.',
+  ['putStockItemsmecano'] = '%s has deposited x%s %s from Benny\'s safe.',
+  ['hijack_vehicle'] = '%s hijack  the door of a vehicle.',
+  ['fix_vehicle'] = '%s Repair a vehicle.',
+  ['clean_vehicle'] = '%s Cleans a vehicle.',
+  ['del_vehicle'] = '%s Sends a vehicle to the pound.',
+  ['dep_vehicle'] = '%s Tow a vehicle.',
   -- esx_policejob
   ['add_weapon'] = '%s has added a weapon in the armory of the police station.',
   ['confiscated'] = '%s a confiscated x%s %s that belonged to %s.',

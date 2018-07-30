@@ -7,8 +7,9 @@ Have log of all transaction in job!
 2. Add the project to your `server.cfg`
 3. Go to compatible ressource and turn Config.EnableJobLogs to true
 4. Add esx_joblogs events in job or use compatible version of job.
-* esx_policejob with esx_joblogs in https://github.com/RedAlex/esx_policejob
-* esx_ambulancejob with esx_joblogs inhttps://github.com/RedAlex/esx_ambulancejob
+* esx_policejob    with esx_joblogs in https://github.com/RedAlex/esx_policejob
+* esx_ambulancejob with esx_joblogs in https://github.com/RedAlex/esx_ambulancejob
+* esx_mecanojob    with esx_joblogs in https://github.com/RedAlex/esx_mecanojob
 
 # Features
 - log reboot of your server.
@@ -25,10 +26,18 @@ Have log of all transaction in job!
   - Log Take item in pharmacy
   - Log Revive
   - Log Heal
- 
+
+- esx_mecanojob
+  - Log bill send
+  - Log take of add item in stock
+  - Log hijack vehicle
+  - Log fix vehicle
+  - Log clean vehicle
+  - Log delete vehicle
+  - Log tow vehicle
+
 # Ready but not compatible at this time. 
-- esx_mecanojob (With lscustom too) "Ready but not add in the github"
-  - Log bill send and pay (When compatible with esx_billing)
+- lscustom
 
 - esx_vehicleshop "Ready but not add in the github"
   - Log bill send and pay (When compatible with esx_billing)
