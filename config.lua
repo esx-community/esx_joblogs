@@ -1,2 +1,15 @@
 Config        = {}
 Config.Locale = 'fr'
+Config.EnableDiscordLink      = true -- only turn this on if you want link the log to a discord
+Config.green 				  = 56108
+Config.grey 				  = 8421504
+Config.red 					  = 16711680
+Config.orange 				  = 16744192
+Config.blue 				  = 2061822
+Config.purple 				  = 11750815
+Config.webhookambulance       = "https://discordapp.com/api/webhooks/473571126690316298/oJZBU9YLz9ksOCG_orlf-wpMZ2pkFedfpEsC34DN_iHO0CBBp6X06W3mMJ2RvMMK7vIO"
+Config.webhookpolice          = "DiscordApiWebhookHere"
+Config.webhookmecano          = "DiscordApiWebhookHere"
+Config.webhooktaxi            = "DiscordApiWebhookHere"
+Config.webhookconcess         = "DiscordApiWebhookHere"
+Config.webhooksheriff         = "DiscordApiWebhookHere"
