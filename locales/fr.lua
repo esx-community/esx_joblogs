@@ -1,5 +1,6 @@
 Locales['fr'] = {
   -- Global
+  ['del_vehicle'] = '%s Envoie un véhicule a la fourrière.',
   ['hijack_vehicle'] = '%s Crochet la portiere d\'un véhicule.',
   ['reboot'] = 'Serveur Ouvert.',
   ['sendBill'] = '%s a donné une amande a %s pour "%s"(%s)',
@@ -17,16 +18,13 @@ Locales['fr'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_lscustom
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['buy_mod'] = '%s a payé une modification.',
   -- esx_mecanojob
   ['mecano_bot_name'] = 'Mecano Log',
   ['getSharedInventorymecano'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
   ['putStockItemsmecano'] = '%s a déposé x%s %s dans le coffre du Benny\'s.',
   ['fix_vehicle'] = '%s Répare un véhicule.',
   ['clean_vehicle'] = '%s Nettoie un véhicule.',
-  ['del_vehicle'] = '%s Envoie un véhicule a la fourrière.',
   ['dep_vehicle'] = '%s Remorque un véhicule.',
   -- esx_policejob
   ['police_bot_name'] = 'Police Log',

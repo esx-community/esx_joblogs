@@ -1,5 +1,6 @@
 Locales['en'] = {
   -- Global
+  ['del_vehicle'] = '%s Sends a vehicle to the pound.',
   ['hijack_vehicle'] = '%s hijack  the door of a vehicle.',
   ['reboot'] = 'Server Open',
   ['sendBill'] = '%s has given a fine to %s for "%s"(%s)',
@@ -17,16 +18,13 @@ Locales['en'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_lscustom
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['buy_mod'] = '%s paid a change.',
   -- esx_mecanojob
   ['mecano_bot_name'] = 'Mecano Log',
   ['getSharedInventorymecano'] = '%s removed x%s %s from Benny\'s safe.',
   ['putStockItemsmecano'] = '%s has deposited x%s %s from Benny\'s safe.',
   ['fix_vehicle'] = '%s Repair a vehicle.',
   ['clean_vehicle'] = '%s Cleans a vehicle.',
-  ['del_vehicle'] = '%s Sends a vehicle to the pound.',
   ['dep_vehicle'] = '%s Tow a vehicle.',
   -- esx_policejob
   ['police_bot_name'] = 'Police Log',
