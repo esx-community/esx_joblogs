@@ -1,5 +1,6 @@
 Locales['fr'] = {
   -- Global
+  ['hijack_vehicle'] = '%s Crochet la portiere d\'un véhicule.',
   ['reboot'] = 'Serveur Ouvert.',
   ['sendBill'] = '%s a donné une amande a %s pour "%s"(%s)',
   -- es_admin2
@@ -22,8 +23,7 @@ Locales['fr'] = {
   -- esx_mecanojob
   ['mecano_bot_name'] = 'Mecano Log',
   ['getSharedInventorymecano'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
-  ['putStockItemsmecano'] = '%s a déposé x%s %s du coffre Benny\'s.',
-  ['hijack_vehicle'] = '%s Crochet la portiere d\'un véhicule.',
+  ['putStockItemsmecano'] = '%s a déposé x%s %s dans le coffre du Benny\'s.',
   ['fix_vehicle'] = '%s Répare un véhicule.',
   ['clean_vehicle'] = '%s Nettoie un véhicule.',
   ['del_vehicle'] = '%s Envoie un véhicule a la fourrière.',
@@ -39,8 +39,8 @@ Locales['fr'] = {
   ['removeArmoryWeapon'] = '%s à pris un arme dans l\'armurerie du commissariat.',
   -- esx_taxijob
   ['taxi_bot_name'] = 'Taxi Log',
-  ['getSharedInventoryTaxi'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
-  ['putStockItemsTaxi'] = '%s a déposé x%s %s du coffre Taxi.',
+  ['getSharedInventoryTaxi'] = '%s a retiré x%s %s dans le coffre du Taxi.',
+  ['putStockItemsTaxi'] = '%s a déposé x%s %s dans le coffre du Taxi.',
   -- esx_vehicleshop
   ['temp'] = 'temp',
   ['temp'] = 'temp',
