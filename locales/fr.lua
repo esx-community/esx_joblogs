@@ -7,6 +7,7 @@ Locales['fr'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_ambulancejob
+  ['ambulance_bot_name'] = 'Ambulance Log',
   ['revive'] = '%s a réanimé %s',
   ['heal'] = '%s a soigné %s',
   ['getitem'] = '%s a pris des %s dans la pharmacie de l\'hôpital.',
@@ -19,6 +20,7 @@ Locales['fr'] = {
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_mecanojob
+  ['mecano_bot_name'] = 'Mecano Log',
   ['getSharedInventorymecano'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
   ['putStockItemsmecano'] = '%s a déposé x%s %s du coffre Benny\'s.',
   ['hijack_vehicle'] = '%s Crochet la portiere d\'un véhicule.',
@@ -27,6 +29,7 @@ Locales['fr'] = {
   ['del_vehicle'] = '%s Envoie un véhicule a la fourrière.',
   ['dep_vehicle'] = '%s Remorque un véhicule.',
   -- esx_policejob
+  ['police_bot_name'] = 'Police Log',
   ['add_weapon'] = '%s a rajouté un arme dans l\'armurerie du commissariat.',
   ['confiscated'] = '%s a confisqué x%s %s qui appartenait à %s.',
   ['id_card'] = '%s a vérifié la carte d\'identité de %s',
@@ -35,6 +38,7 @@ Locales['fr'] = {
   ['putStockItems'] = '%s a déposé x%s %s du coffre dans le commissariat.',
   ['removeArmoryWeapon'] = '%s à pris un arme dans l\'armurerie du commissariat.',
   -- esx_taxijob
+  ['taxi_bot_name'] = 'Taxi Log',
   ['getSharedInventoryTaxi'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
   ['putStockItemsTaxi'] = '%s a déposé x%s %s du coffre Taxi.',
   -- esx_vehicleshop
