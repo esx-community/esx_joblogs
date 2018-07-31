@@ -71,3 +71,4 @@ Have log of all transaction in job!
 # Create By
 - Alex Garcio(https://github.com/RedAlex)
 - Jade Perron(https://github.com/CaptnElizabeth)
+- Discord link integration by MrFr4g (https://github.com/MrFr4g) based on https://github.com/ElNelyo/esx_discord_bot
