@@ -3,7 +3,7 @@ Locales['en'] = {
   ['del_vehicle'] = '%s Sends a vehicle to the pound.',
   ['hijack_vehicle'] = '%s hijack  the door of a vehicle.',
   ['reboot'] = 'Server Open',
-  ['sendBill'] = '%s has given a fine to %s for "%s"(%s)',
+  ['sendBill'] = '%s has given a bill to %s for "%s"(%s)',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
@@ -35,6 +35,7 @@ Locales['en'] = {
   ['getSharedInventory'] = '%s removed x%s %s from the safe in the police station.',
   ['putStockItems'] = '%s has deposited x%s %s from the safe in the police station.',
   ['removeArmoryWeapon'] = '%s took a weapon in the police station\'s armory.',
+  ['SendFine'] = '%s has given a fine to %s for "%s"(%s)',
   -- esx_taxijob
   ['taxi_bot_name'] = 'Taxi Log',
   ['getSharedInventoryTaxi'] = '%s removed x%s %s from Taxi safe.',

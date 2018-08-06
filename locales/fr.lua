@@ -3,7 +3,7 @@ Locales['fr'] = {
   ['del_vehicle'] = '%s Envoie un véhicule a la fourrière.',
   ['hijack_vehicle'] = '%s Crochet la portiere d\'un véhicule.',
   ['reboot'] = 'Serveur Ouvert.',
-  ['sendBill'] = '%s a donné une amande a %s pour "%s"(%s)',
+  ['sendBill'] = '%s a donné une facture a %s pour "%s"(%s)',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
@@ -35,6 +35,7 @@ Locales['fr'] = {
   ['getSharedInventory'] = '%s a retiré x%s %s du coffre dans le commissariat.',
   ['putStockItems'] = '%s a déposé x%s %s du coffre dans le commissariat.',
   ['removeArmoryWeapon'] = '%s à pris un arme dans l\'armurerie du commissariat.',
+  ['SendFine'] = '%s a donné une amande a %s pour "%s"(%s)',
   -- esx_taxijob
   ['taxi_bot_name'] = 'Taxi Log',
   ['getSharedInventoryTaxi'] = '%s a retiré x%s %s dans le coffre du Taxi.',
