@@ -1,33 +1,33 @@
 Locales['br'] = {
   -- Global
-  ['del_vehicle'] = '%s Sends a vehicle to the pound.',
-  ['hijack_vehicle'] = '%s hijack  the door of a vehicle.',
+  ['del_vehicle'] = '%s Enviou um veículo para o estacionamento.',
+  ['hijack_vehicle'] = '%s tentou roubar um carro',
   ['reboot'] = 'Servidor aberto',
-  ['sendBill'] = '%s has given a bill to %s for "%s"(%s)',
+  ['sendBill'] = '%s deu uma conta para %s de "%s"(%s)',
   -- es_admin2
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_ambulancejob
-  ['ambulance_bot_name'] = 'Ambulance Log',
-  ['revive'] = '%s revived %s',
-  ['heal'] = '%s treated %s',
-  ['getitem'] = '%s took some %s in the pharmacy of the hospital.',
+  ['ambulance_bot_name'] = 'Registro de Ambulância',
+  ['revive'] = '%s revivido %s',
+  ['heal'] = '%s tratado %s',
+  ['getitem'] = '%s levou alguns %s na farmácia do hospital.',
   -- esx_billing
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   ['temp'] = 'temp',
   -- esx_lscustom
-  ['buy_mod'] = '%s paid a change.',
+  ['buy_mod'] = '%s pagou pela mudança.',
   -- esx_mecanojob
-  ['mecano_bot_name'] = 'Mecano Log',
-  ['getSharedInventorymecano'] = '%s removed x%s %s from Benny\'s safe.',
-  ['putStockItemsmecano'] = '%s has deposited x%s %s from Benny\'s safe.',
-  ['fix_vehicle'] = '%s Repair a vehicle.',
-  ['clean_vehicle'] = '%s Cleans a vehicle.',
-  ['dep_vehicle'] = '%s Tow a vehicle.',
+  ['mecano_bot_name'] = 'Registro mecânico',
+  ['getSharedInventorymecano'] = '%s removido x%s %s do cofre de Benny.',
+  ['putStockItemsmecano'] = '%s depositou x%s %s do cofre de Benny.',
+  ['fix_vehicle'] = '%s Reparar um veículo.',
+  ['clean_vehicle'] = '%s Limpa um veículo.',
+  ['dep_vehicle'] = '%s Reboque um veículo.',
   -- esx_policejob
-  ['police_bot_name'] = 'Police Log',
+  ['police_bot_name'] = 'Registo Policial',
   ['add_weapon'] = '%s adicionou uma arma no arsenal da delegacia.',
   ['confiscated'] = '%s confiscado x%s %s que pertencia a %s.',
   ['id_card'] = '%s verifiquei a identidade de %s',
@@ -38,8 +38,8 @@ Locales['br'] = {
   ['SendFine'] = '%s deu uma multa para %s para "%s"(%s)',
   -- esx_taxijob
   ['taxi_bot_name'] = 'Taxi Log',
-  ['getSharedInventoryTaxi'] = '%s removed x%s %s from Taxi safe.',
-  ['putStockItemsTaxi'] = '%s has deposited x%s %s from Taxi safe.',
+  ['getSharedInventoryTaxi'] = '%s removido x%s %s do cofre do Taxi.',
+  ['putStockItemsTaxi'] = '%s depositou x%s %s do cofre do Taxi.',
   -- esx_vehicleshop 
   ['temp'] = 'temp',
   ['temp'] = 'temp',
