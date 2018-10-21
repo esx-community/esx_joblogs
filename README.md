@@ -22,6 +22,9 @@ Have log of all transaction in job!
   - Log Take item in pharmacy
   - Log Revive
   - Log Heal
+  
+- esx_billing
+  - Log pay bill
 
 - esx_lscustom
   - Log mod buy
@@ -56,16 +59,12 @@ Have log of all transaction in job!
   - Log car sold to a player
   - Log car sold to a society (In test)
 
-- esx_billing
-  - Log pay bill
-  
  
 # Requirements
 - ESX
 
 # ToDo
 - Move text from esx ressource to locales in esx_joblogs
-- add event and code need in esx_billing github
 - add event and code need in esx_vehicleshop github
 - add log on admin and modo command.
 - add event and code need in es_admin2 github
