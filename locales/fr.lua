@@ -14,9 +14,7 @@ Locales['fr'] = {
   ['heal'] = '%s a soigné %s',
   ['getitem'] = '%s a pris des %s dans la pharmacie de l\'hôpital.',
   -- esx_billing
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['paybill'] = '%s a payé la facture de %s au montant de %s $.',
   -- esx_lscustom
   ['buy_mod'] = '%s a payé une modification.',
   -- esx_mecanojob

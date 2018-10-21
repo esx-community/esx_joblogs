@@ -14,9 +14,7 @@ Locales['br'] = {
   ['heal'] = '%s tratado %s',
   ['getitem'] = '%s levou alguns %s na farmácia do hospital.',
   -- esx_billing
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['paybill'] = '%s paid the invoice of %s for %s $.',
   -- esx_lscustom
   ['buy_mod'] = '%s pagou pela mudança.',
   -- esx_mecanojob

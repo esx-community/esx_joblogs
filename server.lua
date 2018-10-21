@@ -79,7 +79,7 @@ function SaveInLog(job, message)
             sendToDiscord(Config.webhooktaxi, _U('taxi_bot_name'), message, Config.orange)
           end
     else
-        print("Une erreur c'est produite dans esx_joblogs")
+        print("The job " ..job.. "is not know by esx_joblogs contact the dev.")
     end
 end
 
