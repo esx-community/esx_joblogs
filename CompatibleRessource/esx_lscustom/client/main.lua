@@ -59,6 +59,7 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 	}, function(data, menu)
 		local isRimMod, found = false, false
 		local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+		local vehicleData = ESX.Game.GetVehicleProperties(vehicle)
 
 		if data.current.modType == "modFrontWheels" then
 			isRimMod = true
@@ -84,15 +85,19 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 					if isRimMod then
 						price = math.floor(vehiclePrice * data.current.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
+						TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"buy_mod" ,GetPlayerName() ,price ,vehicleData.plate)
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
+						TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"buy_mod" ,GetPlayerName() ,price ,vehicleData.plate)
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
+						TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"buy_mod" ,GetPlayerName() ,price ,vehicleData.plate)
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
+						TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"buy_mod" ,GetPlayerName() ,price ,vehicleData.plate)
 					end
 				end
 

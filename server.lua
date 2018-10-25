@@ -3,6 +3,7 @@
 --Jade Perron(https://github.com/CaptnElizabeth)
 
 ESX                = nil
+local LogAdmin     = ""
 local LogAmbulance = ""
 local LogMecano    = ""
 local LogPolice    = ""
@@ -32,6 +33,7 @@ end
 
 
 function loadLogs()
+  LogAdmin     = LoadResourceFile("esx_joblogs", "Logs/admin.log")     or ""
   LogAmbulance = LoadResourceFile("esx_joblogs", "Logs/ambulance.log") or ""
   LogConcess   = LoadResourceFile("esx_joblogs", "Logs/concess.log")   or ""
   LogMecano    = LoadResourceFile("esx_joblogs", "Logs/mecano.log")    or ""
@@ -42,7 +44,13 @@ end
 
 
 function SaveInLog(job, message)
-    if job == "ambulance" then
+    if job == "admin" then
+        LogAdmin = LogAdmin .. message .. "\n"
+        SaveResourceFile("esx_joblogs", "Logs/admin.log", LogAdmin, -1)
+          if Config.EnableDiscordLink == true then
+            sendToDiscord(Config.webhookadmin, _U('admin_bot_name'), message, Config.orange)
+          end
+    elseif job == "ambulance" then
         LogAmbulance = LogAmbulance .. message .. "\n"
         SaveResourceFile("esx_joblogs", "Logs/ambulance.log", LogAmbulance, -1)
           if Config.EnableDiscordLink == true then
@@ -107,6 +115,7 @@ end)
 
 
 loadLogs()
+SaveInLog("admin", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("ambulance", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("concess", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("mecano", "["..os.date("%c").."] ' ".. _U("reboot"))

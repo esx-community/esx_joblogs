@@ -18,9 +18,6 @@ AddEventHandler('esx_lscustom:buyMod', function(price)
 			TriggerClientEvent('esx_lscustom:installMod', _source)
 			TriggerClientEvent('esx:showNotification', _source, _U('purchased'))
 			societyAccount.removeMoney(price)
-			if Config.EnableJobLogs == true then
-				TriggerEvent('esx_joblogs:AddInLog',"mecano" ,"buy_mod" ,xPlayer.name)
-			end
 		else
 			TriggerClientEvent('esx_lscustom:cancelInstallMod', _source)
 			TriggerClientEvent('esx:showNotification', _source, _U('not_enough_money'))

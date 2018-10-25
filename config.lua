@@ -7,6 +7,7 @@ Config.red               = 16711680
 Config.orange            = 16744192
 Config.blue              = 2061822
 Config.purple            = 11750815
+Config.webhookadmin      = "DiscordApiWebhookHere"
 Config.webhookambulance  = "https://discordapp.com/api/webhooks/473571126690316298/oJZBU9YLz9ksOCG_orlf-wpMZ2pkFedfpEsC34DN_iHO0CBBp6X06W3mMJ2RvMMK7vIO"
 Config.webhookconcess    = "DiscordApiWebhookHere"
 Config.webhookmecano     = "DiscordApiWebhookHere"

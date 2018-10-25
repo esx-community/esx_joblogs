@@ -5,9 +5,10 @@ Locales['fr'] = {
   ['reboot'] = 'Serveur Ouvert.',
   ['sendBill'] = '%s a donné une facture a %s pour "%s"(%s)',
   -- es_admin2
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['setbankmoney'] = '%s a mis l\'argent en banque de %s a %s.',
+  ['setgroup'] = '%s a mis %s group %s.',
+  ['setmoney'] = '%s a mis l\'argent de %s a %s.',
+  ['setpermlvl'] = '%s a mis %s au niveau de permission %s.',
   -- esx_ambulancejob
   ['ambulance_bot_name'] = 'Ambulance Log',
   ['revive'] = '%s a réanimé %s',
@@ -16,7 +17,7 @@ Locales['fr'] = {
   -- esx_billing
   ['paybill'] = '%s a payé la facture de %s au montant de %s $.',
   -- esx_lscustom
-  ['buy_mod'] = '%s a payé une modification.',
+  ['buy_mod'] = '%s a payé %s $ une modification sur le véhicule %s.',
   -- esx_mecanojob
   ['mecano_bot_name'] = 'Mecano Log',
   ['getSharedInventorymecano'] = '%s a retiré x%s %s dans le coffre du Benny\'s.',
