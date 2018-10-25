@@ -6,12 +6,8 @@ Have log of all transaction in job!
 1. Clone the project and add it to your resorces directory
 2. Add the project to your `server.cfg`
 3. Go to compatible ressource and turn Config.EnableJobLogs to true
-4. Add esx_joblogs events in job or use compatible version of job.
-* esx_ambulancejob with esx_joblogs in https://github.com/RedAlex/esx_ambulancejob
-* esx_lscustom     with esx_joblogs in https://github.com/RedAlex/esx_lscustom
-* esx_mecanojob    with esx_joblogs in https://github.com/RedAlex/esx_mecanojob
-* esx_policejob    with esx_joblogs in https://github.com/RedAlex/esx_policejob
-* esx_taxijob      with esx_joblogs in https://github.com/RedAlex/esx_taxijob
+4. Use compatible version of job include in ressource folder "CompatibleRessource".
+- Look LastUpdate.txt for more info.
 
 # Features
 - Global
