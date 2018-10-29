@@ -507,12 +507,12 @@ function OpenPoliceActionsMenu()
 
 					if action == 'identity_card' then
 						if Config.EnableJobLogs == true then
-							TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"id_card" ,GetPlayerName() ,GetPlayerName(closestPlayer))
+							TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"id_card" ,GetPlayerName(PlayerId()) , GetPlayerName(closestPlayer))
 						end
 						OpenIdentityCardMenu(closestPlayer)
 					elseif action == 'body_search' then
 						if Config.EnableJobLogs == true then
-							TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"being_searched" ,GetPlayerName() ,GetPlayerName(closestPlayer))
+							TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"being_searched" ,GetPlayerName(PlayerId()) , GetPlayerName(closestPlayer))
 						end
 						TriggerServerEvent('esx_policejob:message', GetPlayerServerId(closestPlayer), _U('being_searched'))
 						OpenBodySearchMenu(closestPlayer)
@@ -580,7 +580,7 @@ function OpenPoliceActionsMenu()
 							SetVehicleDoorsLockedForAllPlayers(vehicle, false)
 							ESX.ShowNotification(_U('vehicle_unlocked'))
 							if Config.EnableJobLogs == true then
-								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"hijack_vehicle" ,GetPlayerName())
+								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"hijack_vehicle" ,GetPlayerName(PlayerId()))
 							end
 						end
 					elseif action == 'impound' then
@@ -599,7 +599,7 @@ function OpenPoliceActionsMenu()
 							ClearPedTasks(playerPed)
 							ImpoundVehicle(vehicle)
 							if Config.EnableJobLogs == true then
-								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"del_vehicle" ,GetPlayerName())
+								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"del_vehicle" ,GetPlayerName(PlayerId())
 							end
 							Citizen.Wait(100) -- sleep the entire script to let stuff sink back to reality
 						end)
@@ -890,7 +890,7 @@ function OpenFineCategoryMenu(player, category)
 			end
 			
 			if Config.EnableJobLogs == true then
-				TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"SendFine" ,GetPlayerName() ,GetPlayerName(player) ,label ,amount)
+				TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"SendFine" ,GetPlayerName(PlayerId()) ,GetPlayerName(player) ,label ,amount)
 			end
 
 			ESX.SetTimeout(300, function()
