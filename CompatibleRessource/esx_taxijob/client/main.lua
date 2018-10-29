@@ -324,7 +324,7 @@ function OpenMobileTaxiActionsMenu()
 					else
 						TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_taxi', 'Taxi', amount)
 						if Config.EnableJobLogs == true then
-							TriggerServerEvent('esx_joblogs:AddInLog',"taxi" ,"sendBill" ,GetPlayerName() ,GetPlayerName(closestPlayer) ,"Taxi" ,amount)
+							TriggerServerEvent('esx_joblogs:AddInLog', "taxi", "sendBill", GetPlayerName(PlayerId()), GetPlayerName(closestPlayer), "Taxi", amount)
 						end
 						ESX.ShowNotification(_U('billing_sent'))
 					end

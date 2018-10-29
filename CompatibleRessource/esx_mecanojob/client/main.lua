@@ -394,7 +394,7 @@ function OpenMobileMecanoActionsMenu()
 				menu.close()
                 TriggerServerEvent('esx_billing:sendBill', GetPlayerServerId(closestPlayer), 'society_mecano', _U('mechanic'), amount)
 				if Config.EnableJobLogs == true then
-					TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"sendBill" ,GetPlayerName() ,GetPlayerName(closestPlayer) ,_U('mechanic') ,amount)
+					TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "sendBill", GetPlayerName(PlayerId()), GetPlayerName(closestPlayer), _U('mechanic'), amount)
 				end
               end
             end
@@ -427,7 +427,7 @@ function OpenMobileMecanoActionsMenu()
 				ClearPedTasksImmediately(playerPed)
 
 			    if Config.EnableJobLogs == true then
-                  TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"hijack_vehicle" ,GetPlayerName())
+                  TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "hijack_vehicle", GetPlayerName(PlayerId()))
                 end
 
 				ESX.ShowNotification(_U('vehicle_unlocked'))
@@ -461,7 +461,7 @@ function OpenMobileMecanoActionsMenu()
 				ClearPedTasksImmediately(playerPed)
 
 			    if Config.EnableJobLogs == true then
-                  TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"fix_vehicle" ,GetPlayerName())
+                  TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "fix_vehicle", GetPlayerName(PlayerId()))
                 end
 
 				ESX.ShowNotification(_U('vehicle_repaired'))
@@ -492,7 +492,7 @@ function OpenMobileMecanoActionsMenu()
 				ClearPedTasksImmediately(playerPed)
 
 			    if Config.EnableJobLogs == true then
-                  TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"clean_vehicle" ,GetPlayerName())
+                  TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "clean_vehicle", GetPlayerName(PlayerId()))
                 end
 
 				ESX.ShowNotification(_U('vehicle_cleaned'))
@@ -516,7 +516,7 @@ function OpenMobileMecanoActionsMenu()
               ESX.ShowNotification(_U('vehicle_impounded'))
               ESX.Game.DeleteVehicle(vehicle)
 			  if Config.EnableJobLogs == true then
-				TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"del_vehicle" ,GetPlayerName())
+				TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "del_vehicle", GetPlayerName(PlayerId()))
               end
             else
               ESX.ShowNotification(_U('must_seat_driver'))
@@ -528,7 +528,7 @@ function OpenMobileMecanoActionsMenu()
               ESX.ShowNotification(_U('vehicle_impounded'))
               ESX.Game.DeleteVehicle(vehicle)
 			  if Config.EnableJobLogs == true then
-                TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"del_vehicle" ,GetPlayerName())
+                TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "del_vehicle", GetPlayerName(PlayerId()))
               end
             else
               ESX.ShowNotification(_U('must_near'))
@@ -556,7 +556,7 @@ function OpenMobileMecanoActionsMenu()
                   CurrentlyTowedVehicle = targetVehicle
                   ESX.ShowNotification(_U('vehicle_success_attached'))
 				  if Config.EnableJobLogs == true then
-					TriggerServerEvent('esx_joblogs:AddInLog',"mecano" ,"dep_vehicle" ,GetPlayerName())
+					TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "dep_vehicle", GetPlayerName(PlayerId()))
                   end
 
                   if NPCOnJob then
