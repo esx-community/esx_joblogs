@@ -2,14 +2,14 @@
 --Alex Garcio(https://github.com/RedAlex)
 --Jade Perron(https://github.com/CaptnElizabeth)
 
-ESX                = nil
-local LogAdmin     = ""
-local LogAmbulance = ""
-local LogMecano    = ""
-local LogPolice    = ""
-local LogSheriff   = ""
-local LogTaxi      = ""
-local LogConcess   = ""
+ESX                  = nil
+local LogAdmin       = ""
+local LogAmbulance   = ""
+local LogMecano      = ""
+local LogPolice      = ""
+local LogSheriff     = ""
+local LogTaxi        = ""
+local LogVehicleShop = ""
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
@@ -33,13 +33,13 @@ end
 
 
 function loadLogs()
-  LogAdmin     = LoadResourceFile("esx_joblogs", "Logs/admin.log")     or ""
-  LogAmbulance = LoadResourceFile("esx_joblogs", "Logs/ambulance.log") or ""
-  LogConcess   = LoadResourceFile("esx_joblogs", "Logs/concess.log")   or ""
-  LogMecano    = LoadResourceFile("esx_joblogs", "Logs/mecano.log")    or ""
-  LogPolice    = LoadResourceFile("esx_joblogs", "Logs/police.log")    or ""
-  LogSheriff   = LoadResourceFile("esx_joblogs", "Logs/sheriff.log")   or ""
-  LogTaxi      = LoadResourceFile("esx_joblogs", "Logs/taxi.log")      or ""
+  LogAdmin       = LoadResourceFile("esx_joblogs", "Logs/admin.log")       or ""
+  LogAmbulance   = LoadResourceFile("esx_joblogs", "Logs/ambulance.log")   or ""
+  LogVehicleShop = LoadResourceFile("esx_joblogs", "Logs/vehicleshop.log") or ""
+  LogMecano      = LoadResourceFile("esx_joblogs", "Logs/mecano.log")      or ""
+  LogPolice      = LoadResourceFile("esx_joblogs", "Logs/police.log")      or ""
+  LogSheriff     = LoadResourceFile("esx_joblogs", "Logs/sheriff.log")     or ""
+  LogTaxi        = LoadResourceFile("esx_joblogs", "Logs/taxi.log")        or ""
 end
 
 
@@ -56,11 +56,11 @@ function SaveInLog(job, message)
           if Config.EnableDiscordLink == true then
             sendToDiscord(Config.webhookambulance, _U('ambulance_bot_name'), message, Config.orange)
           end
-    elseif job == "concess" then
-        LogConcess = LogConcess .. message .. "\n"
-        SaveResourceFile("esx_joblogs", "Logs/concess.log", LogConcess, -1)
+    elseif job == "vehicleshop" then
+        LogVehicleShop = LogVehicleShop .. message .. "\n"
+        SaveResourceFile("esx_joblogs", "Logs/vehicleshop.log", LogVehicleShop, -1)
           if Config.EnableDiscordLink == true then
-            sendToDiscord(Config.webhookconcess, _U('concess_bot_name'), message, Config.orange)
+            sendToDiscord(Config.webhookvehicleshop, _U('vehicleshop_bot_name'), message, Config.orange)
           end
     elseif job == "mecano" then
         LogMecano = LogMecano .. message .. "\n"
@@ -117,7 +117,7 @@ end)
 loadLogs()
 SaveInLog("admin", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("ambulance", "["..os.date("%c").."] ' ".. _U("reboot"))
-SaveInLog("concess", "["..os.date("%c").."] ' ".. _U("reboot"))
+SaveInLog("vehicleshop", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("mecano", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("police", "["..os.date("%c").."] ' ".. _U("reboot"))
 SaveInLog("sheriff", "["..os.date("%c").."] ' ".. _U("reboot"))

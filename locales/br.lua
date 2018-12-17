@@ -40,7 +40,10 @@ Locales['br'] = {
   ['getSharedInventoryTaxi'] = '%s removido x%s %s do cofre do Taxi.',
   ['putStockItemsTaxi'] = '%s depositou x%s %s do cofre do Taxi.',
   -- esx_vehicleshop 
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
-  ['temp'] = 'temp',
+  ['vehicleshop_bot_name'] = 'Car Dealer Log',
+  ['carbuy']               = '%s bought a vehicle sold by %s. (Plate : %s ) - (Model : %s)',
+  ['carbuycarbuysociety']  = '%s bought a society vehicle sold by %s. (Society : %s ) - (Model : %s)',
+  ['carrent']              = '%s started renting ( (Plate : %s ) - (Model : %s))',
+  ['carsold']              = '%s resold a vehicle. (Plate : %s ) - (Model : %s)',
+  ['selfcarbuy']           = '%s bought a vehicle. (Plate : %s ) - (Model : %s)',
 }

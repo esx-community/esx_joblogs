@@ -47,21 +47,19 @@ Have log of all transaction in job!
   - Log bill send 
   - Log Take of add item in stock
   
-# Ready but not compatible at this time. 
-
 - esx_vehicleshop "Ready but not add in the github"
-  - Log bill send and pay (When compatible with esx_billing)
-  - Log car buy
+  - Log bill send and pay
+  - Log car rent
+  - Log car self buy
+  - Log car self sold
   - Log car sold to a player
-  - Log car sold to a society (In test)
+  - Log car sold to a society 
 
  
 # Requirements
 - ESX
 
 # ToDo
-- Move text from esx ressource to locales in esx_joblogs
-- add event and code need in esx_vehicleshop github
 - add log on admin and modo command.
 - add event and code need in es_admin2 github
 
