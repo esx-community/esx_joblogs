@@ -18,7 +18,7 @@ server_scripts {
   'locales/es.lua',
   'locales/sv.lua',
   'Logs/ambulance.log',
-  'Logs/concess.log',
+  'Logs/vehicleshop.log',
   'Logs/mecano.log',
   'Logs/police.log',
   'Logs/sheriff.log',
