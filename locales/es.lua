@@ -42,7 +42,7 @@ Locales['es'] = {
   -- esx_vehicleshop 
   ['vehicleshop_bot_name'] = 'Car Dealer Log',
   ['carbuy']               = '%s bought a vehicle sold by %s. (Plate : %s ) - (Model : %s)',
-  ['carbuycarbuysociety']  = '%s bought a society vehicle sold by %s. (Society : %s ) - (Model : %s)',
+  ['carbuysociety']        = '%s bought a society vehicle sold by %s. (Society : %s ) - (Model : %s)',
   ['carrent']              = '%s started renting ( (Plate : %s ) - (Model : %s))',
   ['carsold']              = '%s resold a vehicle. (Plate : %s ) - (Model : %s)',
   ['selfcarbuy']           = '%s bought a vehicle. (Plate : %s ) - (Model : %s)',

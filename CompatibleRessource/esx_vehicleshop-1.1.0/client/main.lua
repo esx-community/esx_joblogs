@@ -265,10 +265,14 @@ function OpenShopMenu()
 											local newPlate     = GeneratePlate()
 											local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
 											vehicleProps.plate = newPlate
+											local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 											SetVehicleNumberPlateText(vehicle, newPlate)
 
 											if Config.EnableOwnedVehicles then
 												TriggerServerEvent('esx_vehicleshop:setVehicleOwned', vehicleProps)
+												if Config.EnableJobLogs == true then
+													TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'selfcarbuy', GetPlayerName(PlayerId()), vehicleProps.plate, VehicleName)
+												end
 											end
 
 											ESX.ShowNotification(_U('vehicle_purchased'))
@@ -300,11 +304,14 @@ function OpenShopMenu()
 
 											local newPlate     = GeneratePlate()
 											local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
+											local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 											vehicleProps.plate = newPlate
 											SetVehicleNumberPlateText(vehicle, newPlate)
 
 											TriggerServerEvent('esx_vehicleshop:setVehicleOwnedSociety', playerData.job.name, vehicleProps)
-
+											if Config.EnableJobLogs == true then
+												TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carbuysociety', GetPlayerName(closestPlayer), GetPlayerName(playerPed), vehicleProps.plate, VehicleName)
+											end
 											ESX.ShowNotification(_U('vehicle_purchased'))
 										end)
 
@@ -336,11 +343,15 @@ function OpenShopMenu()
 
 									local newPlate     = GeneratePlate()
 									local vehicleProps = ESX.Game.GetVehicleProperties(vehicle)
+									local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 									vehicleProps.plate = newPlate
 									SetVehicleNumberPlateText(vehicle, newPlate)
 
 									if Config.EnableOwnedVehicles then
 										TriggerServerEvent('esx_vehicleshop:setVehicleOwned', vehicleProps)
+										if Config.EnableJobLogs == true then
+											TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'selfcarbuy', GetPlayerName(PlayerId()), vehicleProps.plate, VehicleName)
+										end
 									end
 
 									ESX.ShowNotification(_U('vehicle_purchased'))
@@ -486,6 +497,7 @@ function OpenResellerMenu()
 				local newPlate     = GeneratePlate()
 				local vehicleProps = ESX.Game.GetVehicleProperties(LastVehicles[#LastVehicles])
 				local model        = CurrentVehicleData.model
+				local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 				vehicleProps.plate = newPlate
 				SetVehicleNumberPlateText(LastVehicles[#LastVehicles], newPlate)
 
@@ -493,6 +505,9 @@ function OpenResellerMenu()
 
 				if Config.EnableOwnedVehicles then
 					TriggerServerEvent('esx_vehicleshop:setVehicleOwnedPlayerId', GetPlayerServerId(closestPlayer), vehicleProps)
+					if Config.EnableJobLogs == true then
+						TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carbuy', GetPlayerName(closestPlayer), GetPlayerName(PlayerId()), vehicleProps.plate, VehicleName)
+					end
 					ESX.ShowNotification(_U('vehicle_set_owned', vehicleProps.plate, GetPlayerName(closestPlayer)))
 				else
 					ESX.ShowNotification(_U('vehicle_sold_to', vehicleProps.plate, GetPlayerName(closestPlayer)))
@@ -512,6 +527,7 @@ function OpenResellerMenu()
 					local newPlate     = GeneratePlate()
 					local vehicleProps = ESX.Game.GetVehicleProperties(LastVehicles[#LastVehicles])
 					local model        = CurrentVehicleData.model
+					local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 					vehicleProps.plate = newPlate
 					SetVehicleNumberPlateText(LastVehicles[#LastVehicles], newPlate)
 
@@ -519,6 +535,9 @@ function OpenResellerMenu()
 
 					if Config.EnableSocietyOwnedVehicles then
 						TriggerServerEvent('esx_vehicleshop:setVehicleOwnedSociety', xPlayer.job.name, vehicleProps)
+						if Config.EnableJobLogs == true then
+							TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carbuysociety', GetPlayerName(closestPlayer), GetPlayerName(PlayerId()), vehicleProps.plate, VehicleName)
+						end
 						ESX.ShowNotification(_U('vehicle_set_owned', vehicleProps.plate, GetPlayerName(closestPlayer)))
 					else
 						ESX.ShowNotification(_U('vehicle_sold_to', vehicleProps.plate, GetPlayerName(closestPlayer)))
@@ -548,13 +567,16 @@ function OpenResellerMenu()
 						local newPlate     = 'RENT' .. string.upper(ESX.GetRandomString(4))
 						local vehicleProps = ESX.Game.GetVehicleProperties(LastVehicles[#LastVehicles])
 						local model        = CurrentVehicleData.model
+						local VehicleName = GetDisplayNameFromVehicleModel(vehicleProps.model)
 						vehicleProps.plate = newPlate
 						SetVehicleNumberPlateText(LastVehicles[#LastVehicles], newPlate)
 
 						TriggerServerEvent('esx_vehicleshop:rentVehicle', model, vehicleProps.plate, GetPlayerName(closestPlayer), CurrentVehicleData.price, amount, GetPlayerServerId(closestPlayer))
-
+						if Config.EnableJobLogs == true then
+							TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carrent', GetPlayerName(closestPlayer), vehicleProps.plate, VehicleName)
+						end
 						if Config.EnableOwnedVehicles then
-						TriggerServerEvent('esx_vehicleshop:setVehicleOwnedPlayerId', GetPlayerServerId(closestPlayer), vehicleProps)
+							TriggerServerEvent('esx_vehicleshop:setVehicleOwnedPlayerId', GetPlayerServerId(closestPlayer), vehicleProps)
 						end
 
 						ESX.ShowNotification(_U('vehicle_set_rented', vehicleProps.plate, GetPlayerName(closestPlayer)))
@@ -998,8 +1020,14 @@ Citizen.CreateThread(function()
 
 					ESX.TriggerServerCallback('esx_vehicleshop:resellVehicle', function(isOwnedVehicle)
 						if isOwnedVehicle then
+							local vehicleData  = ESX.Game.GetVehicleProperties(CurrentActionData.vehicle)
+							local VehicleName  = GetDisplayNameFromVehicleModel(vehicleData.model)
+							local VehiclePlate = GetVehicleNumberPlateText(CurrentActionData.vehicle)
 							ESX.Game.DeleteVehicle(CurrentActionData.vehicle)
 							ESX.ShowNotification(_U('vehicle_sold'))
+							if Config.EnableJobLogs == true then
+								TriggerServerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carsold', GetPlayerName(PlayerId()), VehiclePlate, VehicleName)
+							end
 						else
 							ESX.ShowNotification(_U('not_yours'))
 						end

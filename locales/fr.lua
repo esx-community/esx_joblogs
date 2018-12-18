@@ -42,7 +42,7 @@ Locales['fr'] = {
   -- esx_vehicleshop
   ['vehicleshop_bot_name'] = 'Car Dealer Log',
   ['carbuy']               = '%s a acheté un véhicule vendu par %s. (Plaque : %s ) - (Model : %s)',
-  ['carbuycarbuysociety']  = '%s a acheté un véhicule de societé vendu par %s. (Societé : %s ) - (Model : %s)',
+  ['carbuysociety']        = '%s a acheté un véhicule de societé vendu par %s. (Societé : %s ) - (Model : %s)',
   ['carrent']              = '%s a commencé la location de ( (Plaque : %s ) - (Model : %s))',
   ['carsold']              = '%s a revendu un véhicule. (Plaque : %s ) - (Model : %s)',
   ['selfcarbuy']           = '%s a acheté un véhicule. (Plaque : %s ) - (Model : %s)',

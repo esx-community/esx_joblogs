@@ -47,9 +47,6 @@ AddEventHandler('esx_vehicleshop:setVehicleOwned', function (vehicleProps)
 		['@vehicle'] = json.encode(vehicleProps)
 	}, function (rowsChanged)
 		TriggerClientEvent('esx:showNotification', _source, _U('vehicle_belongs', vehicleProps.plate))
-		if Config.EnableJobLogs == true then
-			TriggerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'selfcarbuy', xPlayer.name, vehicleProps.plate, vehicleProps.model)
-		end
 	end)
 end)
 
@@ -57,7 +54,6 @@ RegisterServerEvent('esx_vehicleshop:setVehicleOwnedPlayerId')
 AddEventHandler('esx_vehicleshop:setVehicleOwnedPlayerId', function (playerId, vehicleProps)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(playerId)
-	local xSource = ESX.GetPlayerFromId(_source)
 
 	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle) VALUES (@owner, @plate, @vehicle)',
 	{
@@ -66,26 +62,18 @@ AddEventHandler('esx_vehicleshop:setVehicleOwnedPlayerId', function (playerId, v
 		['@vehicle'] = json.encode(vehicleProps)
 	}, function (rowsChanged)
 		TriggerClientEvent('esx:showNotification', playerId, _U('vehicle_belongs', vehicleProps.plate))
-		if Config.EnableJobLogs == true then
-			TriggerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carbuy', xPlayer.name, xSource.name, vehicleProps.plate, vehicleProps.model)
-		end
 	end) 
 end)
 
 RegisterServerEvent('esx_vehicleshop:setVehicleOwnedSociety')
 AddEventHandler('esx_vehicleshop:setVehicleOwnedSociety', function (society, vehicleProps)
-	local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-
 	MySQL.Async.execute('INSERT INTO owned_vehicles (owner, plate, vehicle) VALUES (@owner, @plate, @vehicle)',
 	{
 		['@owner']   = 'society:' .. society,
 		['@plate']   = vehicleProps.plate,
 		['@vehicle'] = json.encode(vehicleProps),
 	}, function (rowsChanged)
-		if Config.EnableJobLogs == true then
-			TriggerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carbuysociety', xPlayer.name, xSource.name, society, vehicleProps.model)
-		end
+
 	end)
 end)
 
@@ -100,9 +88,6 @@ AddEventHandler('esx_vehicleshop:sellVehicle', function (vehicle)
 			['@id'] = id
 		})
 	end)
-	if Config.EnableJobLogs == true then
-		TriggerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carsold', xPlayer.name, vehicle.plate, vehicle.model)
-	end
 end)
 
 RegisterServerEvent('esx_vehicleshop:rentVehicle')
@@ -130,9 +115,6 @@ AddEventHandler('esx_vehicleshop:rentVehicle', function (vehicle, plate, playerN
 			['@owner']       = owner
 		})
 	end)
-	if Config.EnableJobLogs == true then
-		TriggerEvent('esx_joblogs:AddInLog', 'vehicleshop', 'carrent', xPlayer.name, plate, vehicle.model)
-	end
 end)
 
 -- unused?
