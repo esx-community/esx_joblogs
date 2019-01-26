@@ -86,25 +86,25 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 						price = math.floor(vehiclePrice * data.current.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-						TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-						TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod" , GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod" , GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-						TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-						TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					end
 				end
@@ -394,7 +394,7 @@ end)
 -- Activate menu when player is inside marker
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(10)
+		Citizen.Wait(0)
 		local playerPed = PlayerPedId()
 		if IsPedInAnyVehicle(playerPed, false) then
 			local coords      = GetEntityCoords(PlayerPedId())
@@ -406,7 +406,6 @@ Citizen.CreateThread(function()
 					if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < v.Size.x then
 						isInLSMarker  = true
 						ESX.ShowHelpNotification(v.Hint)
-
 						break
 					else
 						isInLSMarker  = false
