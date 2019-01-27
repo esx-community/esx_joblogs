@@ -1,7 +1,7 @@
-Config                 = {}
-Config.DrawDistance    = 100.0
-Config.Locale          = 'en'
-Config.IsMecanoJobOnly = false
+Config                   = {}
+Config.DrawDistance      = 100.0
+Config.Locale            = 'en'
+Config.IsmechanicJobOnly = false
 Config.EnableJobLogs   = true -- only turn this on if you are using esx_joblogs
 
 Config.Zones = {

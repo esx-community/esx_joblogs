@@ -186,7 +186,7 @@ ESX.RegisterServerCallback('esx_billing:payBill', function(source, cb, id)
 								elseif target == "society_taxi" then
 									TargetJob = "taxi"
 								end
-								TriggerEvent('esx_joblogs:AddInLog', TargetJob, 'paybill', xPlayer.name, xTarget, amount)
+								TriggerEvent('esx_joblogs:AddInLog', TargetJob, 'paybill', xPlayer.name, xTarget.name, amount)
 							end
 						if xTarget ~= nil then
 							TriggerClientEvent('esx:showNotification', xTarget.source, _U('received_payment', ESX.Math.GroupDigits(amount)))

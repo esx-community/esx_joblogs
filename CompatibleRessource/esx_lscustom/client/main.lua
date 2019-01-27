@@ -86,25 +86,25 @@ function OpenLSMenu(elems, menuName, menuTitle, parent)
 						price = math.floor(vehiclePrice * data.current.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mechanic", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					elseif v.modType == 11 or v.modType == 12 or v.modType == 13 or v.modType == 15 or v.modType == 16 then
 						price = math.floor(vehiclePrice * v.price[data.current.modNum + 1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod" , GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mechanic", "buy_mod" , GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					elseif v.modType == 17 then
 						price = math.floor(vehiclePrice * v.price[1] / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mechanic", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					else
 						price = math.floor(vehiclePrice * v.price / 100)
 						TriggerServerEvent("esx_lscustom:buyMod", price)
 						if Config.EnableJobLogs then
-							TriggerServerEvent('esx_joblogs:AddInLog', "mecano", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
+							TriggerServerEvent('esx_joblogs:AddInLog', "mechanic", "buy_mod", GetPlayerName(PlayerId()), price, vehicleData.plate)
 						end
 					end
 				end
@@ -401,7 +401,7 @@ Citizen.CreateThread(function()
 			local currentZone = nil
 			local zone 		  = nil
 			local lastZone    = nil
-			if (PlayerData.job ~= nil and PlayerData.job.name == 'mecano') or Config.IsMecanoJobOnly == false then
+			if (PlayerData.job ~= nil and PlayerData.job.name == 'mechanic') or Config.IsmechanicJobOnly == false then
 				for k,v in pairs(Config.Zones) do
 					if GetDistanceBetweenCoords(coords, v.Pos.x, v.Pos.y, v.Pos.z, true) < v.Size.x then
 						isInLSMarker  = true
@@ -414,7 +414,7 @@ Citizen.CreateThread(function()
 			end
 
 			if IsControlJustReleased(0, Keys['E']) and not lsMenuIsShowed and isInLSMarker then
-				if (PlayerData.job ~= nil and PlayerData.job.name == 'mecano') or Config.IsMecanoJobOnly == false then
+				if (PlayerData.job ~= nil and PlayerData.job.name == 'mechanic') or Config.IsmechanicJobOnly == false then
 					lsMenuIsShowed = true
 
 					local vehicle = GetVehiclePedIsIn(playerPed, false)
