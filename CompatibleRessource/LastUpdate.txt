@@ -2,6 +2,6 @@
 * esx_billing      25/01/2019 Original ressource : https://github.com/ESX-Org/esx_billing
 * esx_lscustom     25/01/2019 Original ressource : https://github.com/ESX-Org/esx_lscustom
 * esx_mechanicjob  25/01/2019 Original ressource : https://github.com/ESX-Org/esx_mechanicjob
-* esx_policejob    25/10/2018 Original ressource : https://github.com/ESX-Org/esx_policejob
+* esx_policejob    11/02/2019 Original ressource : https://github.com/ESX-Org/esx_policejob
 * esx_taxijob      25/10/2018 Original ressource : https://github.com/ESX-Org/esx_taxijob
 * esx_vehicleshop  29/09/2018 Original ressource : https://github.com/ESX-Org/esx_vehicleshop
