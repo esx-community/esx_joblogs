@@ -773,6 +773,7 @@ function OpenPoliceActionsMenu()
 							if Config.EnableJobLogs == true then
 								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"hijack_vehicle" ,GetPlayerName(PlayerId()))
 							end
+						end
 					elseif action == 'impound' then
 					
 						-- is the script busy?
@@ -789,7 +790,7 @@ function OpenPoliceActionsMenu()
 							ClearPedTasks(playerPed)
 							ImpoundVehicle(vehicle)
 							if Config.EnableJobLogs == true then
-								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"del_vehicle" ,GetPlayerName(PlayerId())
+								TriggerServerEvent('esx_joblogs:AddInLog',"police" ,"del_vehicle" ,GetPlayerName(PlayerId()))
 							end
 							Citizen.Wait(100) -- sleep the entire script to let stuff sink back to reality
 						end)
