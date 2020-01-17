@@ -2,6 +2,10 @@
 --Alex Garcio(https://github.com/RedAlex)
 --Jade Perron(https://github.com/CaptnElizabeth)
 
+fx_version 'adamant'
+
+game 'gta5'
+
 description 'Logs System for esx jobs.'
 
 version '1.0.0'
